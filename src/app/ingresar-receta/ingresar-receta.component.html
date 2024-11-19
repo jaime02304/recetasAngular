@@ -1,0 +1,46 @@
+<div class="container w-50 text-center">
+  <h1 mt-5 mb-5>Nueva Receta</h1>
+    <form (ngSubmit)="aniadirReceta()" class="mt-5">
+      <div class="mb-3 text-center">
+        <label for="nombrereceta" class="form-label ">Nombre de la receta: </label>
+        <input
+          type="text"
+          [(ngModel)]="receta.nombrereceta"
+          class="form-control"
+          id="nombrereceta"
+          name="nombrereceta"
+        />
+      </div>
+      <div class="mb-3 text-center">
+        <label for="ingredientes" class="form-label ">Ingrecientes: </label>
+        <input
+          type="text"
+          [(ngModel)]="receta.ingredientes"
+          class="form-control"
+          id="ingredientes"
+          name="ingredientes"
+        />
+      </div>
+      <div class="mb-3 text-center">
+        <label for="foto" class="form-label ">Foto: </label>
+        <input
+          type="text"
+          [(ngModel)]="receta.foto"
+          class="form-control"
+          id="foto"
+          name="foto"
+        />
+      </div>
+      <div class="mb-3 text-center">
+        <label for="pasosReceta" class="form-label ">Pasos de la receta: </label>
+        <textarea
+          type="text"
+          [(ngModel)]="receta.pasosReceta"
+          class="form-control"
+          id="pasosReceta"
+          name="pasosReceta"
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>

@@ -1,0 +1,21 @@
+<h1 class="text-center mt-5">Listado de Recetas</h1>
+<ul
+  class="list-group"
+  style="display: flex
+;
+    align-items: center;
+"
+>
+  @if (recetas.length>0) { @for (receta of recetas; track $index) {
+  <li class="list-group-item text-center">
+    Nombre de la receta: {{ receta.nombrereceta }} / Ingrecientes:
+    {{ receta.ingredientes }}
+  </li>
+  <li class="list-group-item text-center">Pasos: {{ receta.pasosReceta }}</li>
+  <button (click)="eliminarReceta(receta.nombrereceta)" class="w-50">
+    Borrar Receta
+  </button>
+  } }@else {
+  <li class="list-group-item text-center">No se encuentra ninguna receta</li>
+  }
+</ul>
